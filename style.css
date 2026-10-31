@@ -1,0 +1,704 @@
+
+/* ==============================
+   GENERAL STYLES
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #c9e4f8;
+    color: #193B5A;
+    line-height: 1.6;
+}
+
+/* ==============================
+   HEADER AND NAVIGATION
+============================== */
+
+.header {
+    width: 100%;
+    padding: 10px 5%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    width: 200px;
+    height: 80px;
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #4ea4de;
+    font-family: 'lucida grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+    font-style: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: #086b8c;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    background-color: #fcfcfc;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 15px;
+    color: rgb(94, 149, 245);
+    text-decoration: none;
+    text-align: left;
+}
+
+.dropdown-menu a:hover {
+    background-color: #e2eff5;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ==============================
+   HERO SECTION
+============================== */
+
+.hero {
+    min-height: 580px;
+    background:
+        linear-gradient(rgba(15, 43, 66, 0.55), rgba(15, 43, 66, 0.55)),
+        url("images/homepage_banner.webp") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+    color: #FFFFFF;
+}
+
+.hero-label,
+.section-label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 65px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content > p:not(.hero-label) {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #51b4ee;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 13px 28px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #840ed2;
+}
+
+/* ==============================
+   INTRODUCTION SECTION
+============================== */
+
+.intro {
+    max-width: 850px;
+    margin: auto;
+    padding: 85px 25px;
+    text-align: center;
+}
+
+.intro .section-label {
+    color: #477C9B;
+}
+
+.intro h2,
+.destinations h2,
+.about-content h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    color: #193B5A;
+    margin-bottom: 18px;
+}
+
+.intro > p:last-child {
+    color: #526B7D;
+    font-size: 16px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* ==============================
+   TRAVEL COLLECTIONS
+============================== */
+
+.destinations {
+    padding: 75px 7%;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.destinations h2 {
+    margin-bottom: 10px;
+}
+
+.section-description {
+    color: #526B7D;
+    margin-bottom: 40px;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.destination-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    border: 1px solid #aedaf0;
+    overflow: hidden;
+    background-color: #f2f9fc;
+}
+
+.destination-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 20px rgba(34, 189, 241, 0.45);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #193B5A;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #526B7D;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.read-link {
+    color: #477C9B;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.read-link:hover {
+    color: #193B5A;
+}
+
+/* ==============================
+   ABOUT US BANNER
+============================== */
+
+.about-banner {
+    padding: 85px 20px;
+    background-color: #C9DFEC;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.about-content .section-label {
+    color: #477C9B;
+}
+
+.about-content p:not(.section-label) {
+    color: #526B7D;
+    margin-bottom: 25px;
+}
+
+.name-highlight {
+    color: #148590;
+    font-weight: bold;
+    font-size: medium;
+    font-style: italic;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer {
+    background-color: #193B5A;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 13px;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navigation {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .intro h2,
+    .destinations h2,
+    .about-content h2 {
+        font-size: 29px;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card img {
+        height: 230px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-content > p:not(.hero-label) {
+        font-size: 15px;
+    }
+}
+
+
+/* ==============================
+   ABOUT US PAGE
+============================== */
+
+.about-heading {
+    text-align: center;
+    padding: 65px 20px 50px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-heading .section-label {
+    color: #053543;
+}
+
+.about-heading h1 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    color: #193B5A;
+    margin-bottom: 15px;
+}
+
+.about-heading > p:last-child {
+    color: #526B7D;
+    font-size: 16px;
+}
+
+/* PROFILE LAYOUT */
+
+.profiles {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    padding: 30px 7% 80px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.profile-card {
+    background-color: #ECF9FF;
+    border-radius: 10px;
+    border: 3px dotted #86b6f4;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(25, 59, 90, 0.12);
+}
+
+/* PROFILE PHOTO */
+
+.profile-photo {
+    width: 100%;
+    height: 390px;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* PROFILE INFORMATION */
+
+.profile-details {
+    padding: 30px;
+}
+
+.profile-label {
+    color: #2d78f0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.profile-details h2 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    color: #155b9d;
+    margin-bottom: 25px;
+}
+
+.profile-section {
+    margin-bottom: 25px;
+}
+
+.profile-section h3 {
+    color: #193B5A;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.profile-section p {
+    color: #526B7D;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .profiles {
+        grid-template-columns: 1fr;
+        padding: 20px 6% 60px;
+    }
+
+    .about-heading h1 {
+        font-size: 30px;
+    }
+
+    .profile-photo {
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .profile-details {
+        padding: 22px;
+    }
+
+    .profile-details h2 {
+        font-size: 28px;
+    }
+}
+
+/* ==============================
+   BACK/NEXT BUTTONS
+============================== */
+
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.page-navigation a {
+    padding: 10px 25px;
+    background-color: #193B5A;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.page-navigation a:hover {
+    background-color: #7f8bf6;
+}
+
+/* ==============================
+   TRAVEL SECTION */
+.travel-intro {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px solid #A9D8F0;
+    border-radius: 15px;
+}
+
+.travel-intro h1 {
+    color: #193B5A;
+    font-family:  Georgia, serif  ;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.travel-intro p {
+    color: #526B7D;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.travel-section {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.travel-section h1 {
+    color: #193B5A;
+    font-family: georgia, serif;
+    margin-bottom: 25px;
+}
+.travel-section h2 {
+    color: #193B5A;
+    font-family: georgia, serif;
+    margin: 10px auto 5px;
+}
+.travel-banner {
+    width: 60%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #f9f8f8;
+}
+
+.travel-description {
+    max-width: 750px;
+    margin: 15px auto;
+    line-height: 1.7;
+    color: #526B7D;
+}
+
+.travel-photo {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    border: 2px solid #b9c6f9;
+    margin-top: 60px;
+    transition: transform 0.3s ease;
+}
+
+.travel-photo:hover {
+    transform: scale(1.03);
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 10px auto;
+    overflow: hidden;
+    padding: 30px 0;
+}
+
+.carousel-track {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: max-content;
+    transition: transform 0.5s ease;
+}
+
+.carousel-track a {
+    display: block;
+    flex-shrink: 0;
+}
+
+.carousel-track img {
+    display: block;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    opacity: 0.35;  
+    transform: scale(0.8);
+    transition: all 0.5s ease;
+}
+
+.carousel-track img.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.carousel-track.odd img.active {
+    box-shadow:
+        0 0 5px #bdddfc,
+        0 0 12px #bdddfc,
+        0 0 45px #bdddfc;
+    border: 2px solid #c6e0fa;
+}
+
+.carousel-track.even img.active {
+    box-shadow:
+        0 0 10px #f9fafa,
+        0 0 25px #f9fafa,
+        0 0 45px #f9fafa;
+    border: 2px solid #dee2e3;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    border: none;
+    background: #193B5A;
+    color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.carousel-btn:hover {
+    background: #22bdf1;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-item {
+    flex-shrink: 0;
+    width: 300px;
+    text-align: center;
+}
+
+.travel-figure {
+    margin: 25px auto;
+    text-align: center;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.travel-figure a {
+    display: block;
+}
+
+.travel-figure figcaption {
+    color: #526B7D;
+    font-size: 13px;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.odd {
+    background-color: #f8f8f8;  
+}  
+
+.even {
+    background-color: #C9DFEC;  
+}
